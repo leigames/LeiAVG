@@ -37,7 +37,7 @@
 - `valueEvent`：一个数字，用户有一个初始值为 0 的 `value`，这里表示对这个数字的增减值。这个数字会通过 `goto` 和 `choices` 控制剧情的走向。
 - `goto`: 下一帧的 ID，为空或不存在时默认是剧情数组中的下一项；或为 `"end"`，表示游戏结束。
     也可以是一个数组：
-    ``` json
+    ``` 
     "goto": [
         {"nextId": 下一帧的id, "valueRange": [下限, 上限]（只有 value 在这个范围内才可以切换到那一帧）}
     ]
@@ -45,7 +45,7 @@
     多个 `valueRange` 条件同时满足时，切换到第一个满足的那一帧；没有 `valueRange` 满足时，结束游戏（等同于 "end"）。
 
 - `choices`：选项，适用于具有选择的特殊帧。choices 是一个数组，格式如下：
-    ``` json
+    ``` 
     "choices" : [
         {"text": 选项A, "goto": 选择该选项后切换到的帧, "valueRange": [lowerLimit, upperLimit]（只有value在这个范围内才显示这个选项）},
         {"text": 选项B, "goto": 选择该选项后切换到的帧, "valueRange": [lowerLimit, upperLimit]（只有value在这个范围内才显示这个选项）}
@@ -55,7 +55,7 @@
 
 ## License
 
-MIT
+MIT（仅程序部分，剧本部分不适用）
 
 ## Acknowledgements
 
