@@ -58,7 +58,7 @@ function loadFrame(index) {
     } else {
         document.getElementById('choices').innerHTML = '';
         document.getElementById('choices').style.display = 'none';
-        document.getElementById('background').addEventListener('click', () => nextFrame(frame));
+        document.getElementById('background').addEventListener('click', () => nextFrame(frame), { once: true });
         document.addEventListener('keydown', () => nextFrame(frame), { once: true });
     }
 
